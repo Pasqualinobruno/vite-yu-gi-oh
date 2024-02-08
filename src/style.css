@@ -15,9 +15,6 @@ body {
   background-color: var(--yu-gi-oh-primary);
 }
 
-img {
-  width: 100%;
-}
 
 .container {
   width: 70%;

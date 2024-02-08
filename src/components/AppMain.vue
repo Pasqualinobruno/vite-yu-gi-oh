@@ -5,7 +5,7 @@ export default {
     name: 'AppMain',
     data() {
         return {
-            base_api_url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
+            base_api_url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=40&offset=0&fname=Sky_striker',
             cards: null,
             error: false,
         }
@@ -33,12 +33,13 @@ export default {
 </script>
 <template>
     <main>
-        <div class="container">
+        <div class="sezion">
             <select name="archetypses" id="archetype">
                 <option selected value="all">All</option>
                 <option value="alien">Alien</option>
-
             </select>
+        </div>
+        <div class="container">
             <div class="number_cards">Found 39 cards</div>
             <div class="row">
                 <AppCard v-for="(card, index) in cards" :key="index" :card="card"></AppCard>
@@ -47,17 +48,24 @@ export default {
     </main>
 </template>
 <style scoped>
+.sezion {
+    width: 70%;
+    max-width: 1176px;
+    margin: auto;
+
+    & select {
+        padding: 0.2rem;
+        padding-right: 1rem;
+        margin: 0.5rem;
+        border-radius: 0.3rem;
+    }
+}
+
+
 main {
-    >.container {
+    & .container {
         background-color: var(--yu-gi-oh-light);
         padding: 1rem;
-
-        >select {
-            padding: 0.2rem;
-            padding-right: 1rem;
-            margin: 0.5rem;
-            border-radius: 0.3rem;
-        }
 
         & .number_cards {
             background-color: var(--yu-gi-oh-dark);
@@ -69,8 +77,6 @@ main {
 
 
     }
-
-
 
 
 
