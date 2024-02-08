@@ -27,6 +27,12 @@ export default {
 <style scoped>
 .card {
     background-color: var(--yu-gi-oh-primary);
+    transition: all 1s;
+
+    & :hover {
+        filter: drop-shadow(0 0 15px rgb(0, 0, 0));
+        scale: 1.01;
+    }
 
     & .info_card {
         padding: 1rem;
@@ -42,9 +48,11 @@ export default {
             color: var(--yu-gi-oh-dark);
         }
     }
-}
 
-img {
-    width: 100%;
+    & img {
+        width: 100%;
+    }
+
+
 }
 </style>
