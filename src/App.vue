@@ -1,15 +1,25 @@
 <script>
-import axios from 'axios';
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
+
 export default {
   name: 'app',
   data() {
-    return {
-
-    }
+    return {};
+  },
+  components: {
+    AppHeader,
+    AppMain,
+    AppFooter
   }
 }
 </script>
 
-<template></template>
+<template>
+  <AppHeader></AppHeader>
+  <AppMain></AppMain>
+  <AppFooter></AppFooter>
+</template>
 
 <style scoped></style>
